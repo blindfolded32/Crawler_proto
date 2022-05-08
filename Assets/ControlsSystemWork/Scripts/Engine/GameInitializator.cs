@@ -9,13 +9,15 @@ namespace Engine
     {
         public GameInitializator(ControllersManager controllersManager, GameData gameData, List<ISelectableUnit> allSelectableUnits)
         {
+            var formationObject = Object.Instantiate((GameObject)Resources.Load("FormationObject"));
             
             var inputController = new InputController(gameData);
-
             
             var selectObjectsController = new SelectObjectsController(allSelectableUnits);
 
-            var moveUnitsController = new MoveUnitsController(selectObjectsController, inputController);
+            var formationController = new FormationController(inputController, formationObject);
+
+            var moveUnitsController = new MoveUnitsController(selectObjectsController, inputController, formationController);
 
             controllersManager.Add(inputController);
             controllersManager.Add(selectObjectsController);
