@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IGUIUpdatable
 {
-    public void localOnGUI();
+    public void LocalOnGUI();
 }

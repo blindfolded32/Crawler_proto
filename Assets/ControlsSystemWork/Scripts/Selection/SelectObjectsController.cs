@@ -60,7 +60,7 @@ namespace Selection
 			}
 		}
 
-		public void localOnGUI()
+		public void LocalOnGUI()
 		{
 			GUI.skin = _skin;
 			GUI.depth = 99;

@@ -30,7 +30,7 @@ public class MoveUnitsController
             }
             else
             {
-                var direction = hits.point - _formationController.GetFormationObjectPosition();
+                var direction = _formationController.GetFormationObjectPosition() - hits.point;
                 Move(hits.point, direction);
             }
         }

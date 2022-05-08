@@ -94,7 +94,7 @@ namespace Engine
         {
             for (var index = 0; index < _gUIUpdatableControllers.Count; ++index)
             {
-                _gUIUpdatableControllers[index].localOnGUI();
+                _gUIUpdatableControllers[index].LocalOnGUI();
             }
         }
 
